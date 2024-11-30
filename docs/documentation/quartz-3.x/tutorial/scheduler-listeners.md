@@ -55,3 +55,8 @@ __Removing a SchedulerListener:__
 ```csharp
 scheduler.ListenerManager.RemoveSchedulerListener(mySchedListener);
 ```
+::: danger
+Quartz.Net will automatically attach a listener to the scheduler if it finds an association between an ISchedulerListner and an concrete implementation in the DI container. Adding it again, as in this example, will make
+the listner fire twice for each event.
+:::
+
