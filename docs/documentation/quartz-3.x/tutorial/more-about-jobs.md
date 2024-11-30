@@ -175,9 +175,7 @@ rather than having to hand-code the individual calls to retrieve the values from
 Many users spend time being confused about what exactly constitutes a "job instance".
 We'll try to clear that up here and in the section below about job state and concurrency.
 
-You can create a single job class, and store many 'instance definitions' of it within the scheduler by creating multiple instances of JobDetails
-
-- each with its own set of properties and JobDataMap - and adding them all to the scheduler.
+You can create a single job class, and store many 'instance definitions' of it within the scheduler by creating multiple instances of JobDetails, each with its own set of properties and JobDataMap, and adding them all to the scheduler.
 
 For example, you can create a class that implements the `IJob` interface called "SalesReportJob".
 The job might be coded to expect parameters sent to it (via the JobDataMap) to specify the name of the sales person that the sales
